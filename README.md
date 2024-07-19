@@ -160,6 +160,38 @@ add compiler options in `tsconfig.json`
 }
 ```
 
+### Coverage
+
+install `jest-html-reporter` for unit test case report
+
+```sh
+npm i -D jest-html-reporter
+```
+
+update `jest.config.ts` with following config
+
+```ts
+export default {
+  // jest.config.ts
+
+  //  ...other config
+  collectCoverage: true,
+  coverageDirectory: "<rootDir>/test/coverage",
+  reporters: [
+    "default",
+    [
+      "jest-html-reporter",
+      {
+        pageTitle: "Test Report",
+        outputPath: "./test/report.html",
+      },
+    ],
+  ],
+};
+```
+
+you can set the coverage and report generation path
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
