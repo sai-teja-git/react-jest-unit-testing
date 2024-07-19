@@ -10,4 +10,16 @@ export default {
     },
 
     setupFilesAfterEnv: ["<rootDir>/test/jest.setup.ts"],
+    collectCoverage: true,
+    coverageDirectory: "<rootDir>/test/coverage",
+    reporters: [
+        "default",
+        [
+            "jest-html-reporter",
+            {
+                pageTitle: 'Test Report',
+                outputPath: './test/report.html'
+            }
+        ],
+    ]
 };
