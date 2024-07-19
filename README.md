@@ -162,13 +162,13 @@ add compiler options in `tsconfig.json`
 
 ### Coverage
 
-install `jest-html-reporter` for unit test case report
+install `jest-html-reporter` for unit test case report.
 
 ```sh
 npm i -D jest-html-reporter
 ```
 
-update `jest.config.ts` with following config
+update `jest.config.ts` with following config.
 
 ```ts
 export default {
